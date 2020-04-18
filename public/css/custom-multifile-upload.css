@@ -1,0 +1,23 @@
+.form_upload_img_main{ width: 100%; }
+
+.form_upload_img_main ul{ font-size:0px; margin:0px -4px; }
+
+.form_upload_img_main ul li{ display:inline-block; vertical-align:top; font-size:14px; padding:0px 4px; }
+
+.form_upload_img{ width: 100px; height: 100px; border-radius: 3px; border:1px solid #c9c9c9; overflow: hidden; position: relative; cursor: pointer; }
+
+.form_upload_img img{ display: block;width: 100%; }
+
+.form_upload_img input{ width: 100%; height: 100%; opacity: 0; font-size: 0px; position: absolute; left: 0px; top: 0px; cursor: pointer; }
+
+.form_upload_img_btn{ width: 100px; height: 100px; border-radius: 3px; border:1px solid #c9c9c9; overflow: hidden; position: relative;
+background:url(../images/plus_white.png) no-repeat center center #ccc; background-size: 16px auto; display: block; transition:all 0.175s ease-in-out; }
+
+.form_upload_img_btn:hover{ opacity: 0.7; }
+
+.all_small_cross{ width:20px; height:20px; background-color:#fa8564; position:absolute; right:0px; top:0px; z-index:5; cursor:pointer; transition:all 0.3s ease; }
+.all_small_cross:before{ content:""; width:100%; height:100%; background:url(../images/plus_white.png) no-repeat center center; background-size: 13px auto; position:absolute; left:0px; top:0px; transform:rotate(45deg); }
+    
+.disable_button{
+    cursor: not-allowed;
+}

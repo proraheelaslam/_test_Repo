@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/***google fonts to be used in css****  font-family: 'Open Sans', sans-serif;  and   font-family: 'Nunito', sans-serif;  *******/
+
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url('fonts/MyriadPro-Regular.woff2') format('woff2'),
+        url('fonts/MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro Bold';
+    src: url('fonts/MyriadPro-Bold.woff2') format('woff2'),
+        url('fonts/MyriadPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro semibolds';
+    src: url('fonts/MyriadPro-Semibold.woff2') format('woff2'),
+        url('fonts/MyriadPro-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'aileronblack';
+    src: url('fonts/aileron-black-webfont.woff2') format('woff2'),
+         url('fonts/aileron-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileronbold';
+    src: url('fonts/aileron-bold-webfont.woff2') format('woff2'),
+         url('fonts/aileron-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileronheavy';
+    src: url('fonts/aileron-heavy-webfont.woff2') format('woff2'),
+         url('fonts/aileron-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileronlight';
+    src: url('fonts/aileron-light-webfont.woff2') format('woff2'),
+         url('fonts/aileron-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileronregular';
+    src: url('fonts/aileron-regular-webfont.woff2') format('woff2'),
+         url('fonts/aileron-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileronsemibold';
+    src: url('fonts/aileron-semibold-webfont.woff2') format('woff2'),
+         url('fonts/aileron-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileronthin';
+    src: url('fonts/aileron-thin-webfont.woff2') format('woff2'),
+         url('fonts/aileron-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'aileronultralight';
+    src: url('fonts/aileron-ultralight-webfont.woff2') format('woff2'),
+         url('fonts/aileron-ultralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/************end fonts************/
+
+.alert-success{color: #008000; padding-bottom: 25px;}
+.alert-danger{color: #FF0000; padding-bottom: 25px;}
+.help-block strong{color: #FF0000;}
+.has-error input {margin-bottom:15px;}
+.disable_button{opacity:0.5; pointer-events:none}
+.error{color: red;}
+.ui-datepicker {z-index: 99999 !important;}
+.not_highlighted_star a {color: #000000 !important;}
+
+.disabled_loader{ position:relative; pointer-events: none;}
+.disabled_loader::after { content: ""; width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; background: url(../../front_assets/images/Ajax-loader.gif) no-repeat center center; background-size: 30px auto; background-color: rgba(255,255,255,0.8); }
+
+.emptyCartSection {
+    height: 329px;
+    text-align: center;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.emptyCartSection p {
+    position: relative;
+    top: 100px;
+    font-size: 19px; line-height: 1.5em; color: #969696;
+    padding-bottom: 30px;
+}
+.emptyCartSection .cp_add_to_cart_button {
+    position: relative;
+    top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pagination{ width:100%; font-size:0px; }
+
+
+.pagination li{ display:inline-block; vertical-align:middle; padding:0px 3px; font-size:14px; }
+
+.pagination li a, .pagination ul li span, .next_pagi, .prev_pagi{ width:45px; height:45px; font-size: 14px; line-height: 36px; color: #4f4f4f; background-color:transparent; padding: 5px; border-radius: 50%; transition: all 0.175s ease-in-out; cursor: pointer; display: inline-block; vertical-align: middle; text-align: center; }
+
+.pagination li:hover a, .pagination ul li.active a, .pagination li:hover span, .pagination ul li.active span{ background:#f79457; color:#fff; }
+
+.pagination li:first-child span, .pagination li:last-child span, .pagination li:first-child a, .pagination li:last-child a{ background-color:transparent !important;  min-width:70px; border:1px solid #eeeeee; border-radius: 30px; background:url(../images/pink_right_arrow.png) no-repeat center center !important; background-size:15px auto !important; padding-right:36px; line-height:34px;
+    font-size: 0px;}
+
+.pagination li:first-child span, .pagination li:first-child a{ background:url(../images/pink_left_arrow.png) no-repeat center center !important; background-size:15px auto !important; padding:5px 5px 5px 36px; }
+
+.pagination li:first-child span:hover, .pagination li:last-child span:hover, .pagination li:first-child a:hover, .pagination li:last-child a:hover{ background-color:#eeeeee !important; }
+
+.pagination li.disabled a, .pagination li.disabled span{ opacity: 0.3; pointer-events: none; }
+
+.not_found_crs_inner {
+    height: 329px;
+    text-align: center;
+    position: relative;
+}
+.not_found_crs_inner p {
+    position: relative;
+    top: 100px;
+    font-size: 20px; line-height: 1.5em; color: #969696;
+    padding-bottom: 30px;
+}
+.cp_accordion_rating a:after { content: none !important;}
+.reviewSubmit_msg_btn {
+    position: relative;
+    left: 10px;
+    top: 3px;
+}
+
+.alert_success_color { color: #008000 !important; }
+
+.form_field label.error{ position:absolute; left: 0px;
+    bottom: -10px;
+}
+.course_rate span {
+    font-size: 16px !important;word-break: break-word;
+}
+.user a{cursor: default;}
+

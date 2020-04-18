@@ -1,0 +1,283 @@
+.dd-list{
+    padding: 20px 0px 20px 10px;
+    /* padding-left: 20px; */
+}
+#sortable .dd3-content{
+    height: 35px;
+}
+#sortable .dd-handle{
+    height: 35px;
+}
+.form-preview-img{
+    height: 50px;
+    widows: 50px;
+}
+.color-required{
+    color:#fa8564;
+}
+.highcharts-container {
+    min-height: 400px !important
+}
+.bg-color-red td{
+    background-color: #fa8564 !important;
+}
+tr.bg-color-red td.sorting_1{
+    background-color: #fa8564 !important;
+}
+
+/* .custom-checked{
+    background: url(../images/checked.png) no-repeat;
+} */
+
+.custom-unchecked{
+    background: url(../images/unchecked.png) no-repeat;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
+    /* cursor: pointer; */
+    position: relative;
+}
+
+.custom-checked{
+    background: url(../images/checked.png) no-repeat;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
+    /* cursor: pointer; */
+    position: relative;
+}
+
+.check-box-span{
+    position: relative;
+    left: 18px;
+    top: -21px;
+}
+
+.my-check-box{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.form-group.required .control-label:after {
+    content:" *";
+    color:#fa8564;
+}
+
+.form-group.required .control-label1:after {
+    content:" *";
+    color:#fa8564;
+}
+
+.light-green{
+    color: #03ca03;
+}
+
+.red{
+    color: red;
+}
+
+.btrr-5{
+    border-top-right-radius: 5px !important;
+}
+
+.bbrr-5{
+    border-bottom-right-radius: 5px !important;
+}
+
+/* increase fa icon size */
+.fa.fa-trash-o, .fa.fa-edit, .fa.fa-bars, .fa.fa-circle, .fa.fa-repeat, .fa.fa-user, .fa.fa-comments{
+    font-size: 20px;
+}
+
+/* .fa.fa-edit {
+    font-size: 2em;
+} */
+
+.mb-5{
+    margin-bottom: 5px;
+}
+
+.mt-5{
+    margin-top: 5px;
+}
+
+.mr-5{
+    margin-right: 5px;
+}
+
+.ml-5{
+    margin-left: 5px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+
+.mr-10{
+    margin-right: 10px;
+}
+
+.ml-10{
+    margin-left: 10px;
+}
+
+.mb-15{
+    margin-bottom: 15px;
+}
+
+.mt-15{
+    margin-top: 15px;
+}
+
+.mr-15{
+    margin-right: 15px;
+}
+
+.ml-15{
+    margin-left: 15px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.mr-20{
+    margin-right: 20px;
+}
+
+.ml-20{
+    margin-left: 20px;
+}
+.mb-25{
+    margin-bottom: 25px;
+}
+
+.mt-25{
+    margin-top: 25px;
+}
+
+.mr-25{
+    margin-right: 25px;
+}
+
+.ml-25{
+    margin-left: 25px;
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.mt-30{
+    margin-top: 30px;
+}
+
+.mr-30{
+    margin-right: 30px;
+}
+
+.ml-30{
+    margin-left: 30px;
+}
+
+.mb-35{
+    margin-bottom: 35px;
+}
+
+.mt-35{
+    margin-top: 35px;
+}
+
+.mr-35{
+    margin-right: 35px;
+}
+
+.ml-35{
+    margin-left: 35px;
+}
+
+.mb-40{
+    margin-bottom: 40px;
+}
+
+.mt-40{
+    margin-top: 40px;
+}
+
+.mr-40{
+    margin-right: 40px;
+}
+
+.ml-40{
+    margin-left: 40px;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+
+.mt-50{
+    margin-top: 50px;
+}
+
+.mr-50{
+    margin-right: 50px;
+}
+
+.ml-50{
+    margin-left: 50px;
+}
+
+.reviews .thumbnail {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    min-width: 40%;
+    border-radius: 5px;
+}
+
+.reviews .thumbnail-description {
+    min-height: 40px;
+}
+
+.reviews .thumbnail:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+}
+
+.btn-default{
+    background-color: #a2a2a2;
+}
+
+.lightgrey{
+    background-color: lightgrey;
+}
+
+.message-time{
+    display: block;
+    font-style: normal;
+    font-size: 10px;
+}
+
+.cate_feature_btn, .cate_popular_btn, .course_feature_btn {
+    cursor: pointer;
+}
+
+.conversation-list .chat-avatar i {
+    font-size: 7px !important;
+    font-style: normal;
+}
