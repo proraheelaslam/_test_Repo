@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="646821369547-herol79n5rla4shbvj053pla3a8ar6tk.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/client.js" async defer></script>
+  </head>
+  <body>
+    <button type="button" onclick="googleSignIn()"> Sign in</button>
+    
+    <script>
+      var CLIENT_ID = "646821369547-herol79n5rla4shbvj053pla3a8ar6tk.apps.googleusercontent.com";
+      var Secret_key = "jHx0aDzWBmZ1CbmPvRqt3MJO";
+      function initGoogleAuth (clientId = 'YOUR_CLIENT_ID') {
+        gapi.auth2.init({
+          client_id: clientId,
+          scope: 'https://www.googleapis.com/auth/userinfo.email'
+        }).then(() => {
+          document.getElementById('sign-in-btn').disabled = false;
+        }).catch(err => {
+          console.log(err);
+        });
+      }
+      function googleSignIn(){
+
+        gapi.auth.authorize({ client_id: CLIENT_ID, scope: ['https://www.googleapis.com/auth/classroom.courses.readonly'], immediate: false, approval_prompt: "force", response_type: "code", access_type: "offline" }, handleAuthResult);
+
+      }
+      function handleAuthResult(authResult) {
+
+          if (authResult && !authResult.error) {
+              sendRequest(authResult.code, 0);
+          } else {
+              authorization_fail();
+          }
+      }
+      function sendRequest(code, status) {
+        console.log("code", code);
+
+    if (!code) {
+        authorization_fail();
+        return;
+    }
+
+    var restRequest = gapi.client.request({
+        'path': "https://www.googleapis.com/oauth2/v3/token",
+        'method': 'POST',
+        'params': {
+            'code': code,
+            'client_id': CLIENT_ID,
+            'client_secret': Secret_key,
+            'redirect_uri': 'postmessage',
+            'grant_type': 'authorization_code',
+
+        },
+
+        'headers': {
+            'Content-type': 'application/x-www-form-urlencoded'
+        },
+
+    });
+
+    restRequest.execute(function (jsonResponse, rawResponse) {
+
+        google_token = jsonResponse.access_token;
+        gapi.auth.setToken({
+            access_token: google_token
+        });
+        var refresh_token = jsonResponse.refresh_token;
+       console.log('refresh_token', refresh_token);
+        gapi.client.load('people', 'v1').then(function () {
+            var request = gapi.client.people.people.get({
+                'resourceName': 'people/me',
+                'requestMask.includeField': 'person.names'
+            });
+            request.then(function (resp) {
+                var res_name = resp.result.resourceName;
+                var res_arr = res_name.split("/");
+                var google_u_id = res_arr[1];
+                if (status == 0) {
+                    $.ajax({
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        url: "/GoogleDocs/SaveUser",
+                        data: '{"access_token":"' + refresh_token + '","user_id":"' + google_u_id+'"}',
+                        success: function (data) {
+                            window.location.reload(true);
+                        }
+                    });
+                } else {
+                    setUpView();
+                }
+            }, function (reason) {
+
+            });
+        });
+    });
+}
+
+     </script>
+  </body>
+</html>
